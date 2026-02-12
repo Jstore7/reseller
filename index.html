@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Jstore Reseller List · Premium</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* === ORIGINAL AESTHETIC – 100% SAMA MACAM SKRIP ASAL === */
+    /* === ORIGINAL AESTHETIC 100% + MOBILE OPTIMIZATION === */
     body {
       background: radial-gradient(ellipse at bottom, #0f172a, #000);
       color: white;
@@ -16,13 +16,12 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 1.5rem;
+      padding: 1rem;
       margin: 0;
       overflow-x: hidden;
       position: relative;
     }
     
-    /* SPACE BACKGROUND – SAMA PERSIS */
     .space-bg {
       position: fixed;
       top: 0;
@@ -33,7 +32,6 @@
       overflow: hidden;
     }
 
-    /* FLOATING PARTICLES – ORIGINAL STYLE */
     .particle {
       position: absolute;
       background: rgba(255, 255, 255, 0.8);
@@ -58,7 +56,6 @@
       }
     }
 
-    /* NEBULA PULSE – SAMA */
     .nebula {
       position: absolute;
       border-radius: 50%;
@@ -73,15 +70,18 @@
       100% { transform: scale(1); }
     }
     
-    /* GLASS CARD – IDENTIK DENGAN ASAL */
     .glass-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1.5rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       z-index: 10;
+      width: 100%;
+      max-width: 550px;
+      margin: 0 auto;
     }
     
     .glass-card:hover {
@@ -91,27 +91,27 @@
     }
     
     .reseller-container {
-      max-width: 550px;
       width: 100%;
-      padding: 2rem;
+      padding: 1.8rem 1.5rem;
       text-align: center;
     }
     
-    /* PHONE NUMBER – GLASS BORDER PINK, SAMA */
     .phone-number {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-left: 6px solid #ec4899;
       padding: 1rem 1.2rem;
       border-radius: 1rem;
       margin-bottom: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 1rem;
       transition: all 0.3s ease;
+      word-break: break-word;
     }
     
     .phone-number:hover {
@@ -125,27 +125,15 @@
       color: #ec4899;
       font-size: 1.4rem;
       width: 28px;
+      flex-shrink: 0;
     }
-    
-    /* GLOW BUTTON – dikekalkan dalam skrip, tapi TAK DIGUNAKAN (back button dibuang) */
-    .glow-btn {
-      box-shadow: 0 0 20px rgba(255, 0, 128, 0.6), 0 0 30px rgba(255, 0, 128, 0.2);
-      transition: all 0.3s ease;
-      background: #ec4899;
+
+    .phone-number span {
       color: white;
-      font-weight: bold;
-      padding: 0.8rem 2.2rem;
-      border-radius: 9999px;
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    
-    .glow-btn:hover {
-      box-shadow: 0 0 25px rgba(255, 0, 128, 0.8), 0 0 40px rgba(255, 0, 128, 0.4);
-      transform: translateY(-2px);
-      background: #db2777;
+      letter-spacing: 0.5px;
+      font-size: 1.1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     
     @keyframes float-logo {
@@ -155,147 +143,171 @@
     
     .floating-logo {
       animation: float-logo 3s ease-in-out infinite;
-    }
-    
-    /* HR – SAMA MACAM ASAL */
-    hr {
-      border-color: rgba(255, 255, 255, 0.1);
-      margin-top: 2.5rem;
-      margin-bottom: 1.5rem;
+      width: 80px;
+      height: auto;
     }
 
-    /* tiada back button – clean premium reseller list */
+    hr {
+      border-color: rgba(255, 255, 255, 0.1);
+      margin-top: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Mobile fine-tuning */
+    @media (max-width: 480px) {
+      body { padding: 0.75rem; }
+      .reseller-container { padding: 1.5rem 1.2rem; }
+      .phone-number { 
+        padding: 0.9rem 1rem; 
+        font-size: 1rem;
+      }
+      .phone-number i { font-size: 1.2rem; width: 24px; }
+      .floating-logo { width: 70px; }
+      h1 { font-size: 1.9rem; }
+    }
   </style>
 </head>
 <body>
-  <!-- Animated Space Background – SAMA MACAM ASAL, TAK SENTUH -->
+  <!-- Animated Space Background -->
   <div class="space-bg" id="spaceBackground"></div>
 
-  <!-- GLASS CARD UTAMA – SAMA TAPI BUTANG BACK DAH DIBUANG -->
+  <!-- GLASS CARD UTAMA - RESPONSIVE & STABLE DI SEMUA PERANTI -->
   <div class="glass-card reseller-container">
     
-    <!-- Logo Jstore – floating effect -->
+    <!-- Logo Jstore -->
     <div class="flex justify-center mb-4">
-      <img src="https://iili.io/H7B4QYF.png" alt="Jstore Logo" class="w-20 floating-logo" />
+      <img src="https://iili.io/H7B4QYF.png" alt="Jstore Logo" class="floating-logo" />
     </div>
     
-    <!-- Title – bold pink, tracking sama -->
-    <h1 class="text-3xl font-extrabold text-pink-500 mb-1 drop-shadow-lg tracking-wide">JSTORE RESELLER</h1>
-    <p class="text-gray-300 mb-6 text-sm uppercase tracking-wider">Registered Seller List</p>
+    <!-- Title -->
+    <h1 class="text-3xl md:text-3xl font-extrabold text-pink-500 mb-1 drop-shadow-lg tracking-wide">JSTORE RESELLER</h1>
+    <p class="text-gray-300 mb-6 text-xs uppercase tracking-wider">Registered Seller List</p>
     
-    <!-- LIST NOMBOR RESELLER – SAMA PERSIS DENGAN ASAL, 8 NUMBER -->
+    <!-- LIST NOMBOR RESELLER - 8 NUMBER -->
     <div class="space-y-3 text-left">
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">01129309383</span>
+        <span>01129309383</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">0182651427</span>
+        <span>0182651427</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">0177185578</span>
+        <span>0177185578</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">01155102278</span>
+        <span>01155102278</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">0189668011</span>
+        <span>0189668011</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">0143035717</span>
+        <span>0143035717</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">0103936293</span>
+        <span>0103936293</span>
       </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
-        <span class="text-white tracking-wide">01110662672</span>
+        <span>01110662672</span>
       </div>
     </div>
     
-  
-    
-    <p class="text-gray-400 text-xs mt-4">© 2025 Jstore IPTV · Premium Streaming Service</p>
+    <p class="text-gray-400 text-xs mt-6">© 2025 Jstore IPTV · Premium Streaming Service</p>
   </div>
   
   <script>
-    // BACKGROUND SPACE – 100% SAMA MACAM ORIGINAL, 80 partikel, 4 nebula
-    document.addEventListener('DOMContentLoaded', function() {
-      const spaceBg = document.getElementById('spaceBackground');
+    (function() {
+      'use strict';
       
-      // Create particles – 80 bijik, exactly sama
-      for (let i = 0; i < 80; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
+      function initBackground() {
+        const spaceBg = document.getElementById('spaceBackground');
+        if (!spaceBg) return;
         
-        const size = Math.random() * 3 + 1;
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100;
-        const delay = Math.random() * 15;
-        const duration = Math.random() * 30 + 20;
+        // Clear existing content (prevent duplicate on re-run)
+        spaceBg.innerHTML = '';
         
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${posX}vw`;
-        particle.style.top = `${posY}vh`;
-        particle.style.animationDelay = `${delay}s`;
-        particle.style.animationDuration = `${duration}s`;
+        // Create 80 particles
+        for (let i = 0; i < 80; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          
+          const size = Math.random() * 3 + 1;
+          const posX = Math.random() * 100;
+          const posY = Math.random() * 100;
+          const delay = Math.random() * 15;
+          const duration = Math.random() * 30 + 20;
+          
+          particle.style.width = size + 'px';
+          particle.style.height = size + 'px';
+          particle.style.left = posX + 'vw';
+          particle.style.top = posY + 'vh';
+          particle.style.animationDelay = delay + 's';
+          particle.style.animationDuration = duration + 's';
+          
+          spaceBg.appendChild(particle);
+        }
         
-        spaceBg.appendChild(particle);
+        // Create 4 nebula
+        for (let i = 0; i < 4; i++) {
+          const nebula = document.createElement('div');
+          nebula.classList.add('nebula');
+          
+          const colors = ['#ff00ff', '#00ffff', '#8b5cf6', '#ec4899'];
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          const size = Math.random() * 300 + 100;
+          const posX = Math.random() * 100;
+          const posY = Math.random() * 100;
+          const delay = Math.random() * 10;
+          const duration = Math.random() * 20 + 10;
+          
+          nebula.style.width = size + 'px';
+          nebula.style.height = size + 'px';
+          nebula.style.left = posX + 'vw';
+          nebula.style.top = posY + 'vh';
+          nebula.style.backgroundColor = color;
+          nebula.style.animationDelay = delay + 's';
+          nebula.style.animationDuration = duration + 's';
+          
+          spaceBg.appendChild(nebula);
+        }
+      }
+
+      // Run background init
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBackground);
+      } else {
+        initBackground();
       }
       
-      // Create nebula – 4 bijik dengan warna premium
-      for (let i = 0; i < 4; i++) {
-        const nebula = document.createElement('div');
-        nebula.classList.add('nebula');
+      // Interactive effects
+      function addInteractions() {
+        const card = document.querySelector('.glass-card');
+        if(card) {
+          card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-5px)');
+          card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
+        }
         
-        const colors = ['#ff00ff', '#00ffff', '#8b5cf6', '#ec4899'];
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        const size = Math.random() * 300 + 100;
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100;
-        const delay = Math.random() * 10;
-        const duration = Math.random() * 20 + 10;
-        
-        nebula.style.width = `${size}px`;
-        nebula.style.height = `${size}px`;
-        nebula.style.left = `${posX}vw`;
-        nebula.style.top = `${posY}vh`;
-        nebula.style.backgroundColor = color;
-        nebula.style.animationDelay = `${delay}s`;
-        nebula.style.animationDuration = `${duration}s`;
-        
-        spaceBg.appendChild(nebula);
-      }
-      
-      // Interactive effect untuk glass card – macam asal
-      const card = document.querySelector('.glass-card');
-      if(card) {
-        card.addEventListener('mouseenter', () => {
-          card.style.transform = 'translateY(-5px)';
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'translateY(0)';
+        const numbers = document.querySelectorAll('.phone-number');
+        numbers.forEach(num => {
+          num.addEventListener('mouseenter', () => num.style.transform = 'translateY(-3px)');
+          num.addEventListener('mouseleave', () => num.style.transform = 'translateY(0)');
         });
       }
       
-      // Interactive effect untuk phone numbers – setiap satu responsive
-      const numbers = document.querySelectorAll('.phone-number');
-      numbers.forEach(num => {
-        num.addEventListener('mouseenter', () => {
-          num.style.transform = 'translateY(-3px)';
-        });
-        num.addEventListener('mouseleave', () => {
-          num.style.transform = 'translateY(0)';
-        });
-      });
-    });
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', addInteractions);
+      } else {
+        addInteractions();
+      }
+      
+    })();
   </script>
 </body>
 </html>

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jstore Reseller List</title>
+  <title>Jstore Reseller List · Premium</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* === ORIGINAL AESTHETIC – 100% SAMA MACAM SKRIP ASAL === */
     body {
       background: radial-gradient(ellipse at bottom, #0f172a, #000);
       color: white;
@@ -21,7 +22,7 @@
       position: relative;
     }
     
-    /* Space Background - SAMA MACAM SKRIP ASAL */
+    /* SPACE BACKGROUND – SAMA PERSIS */
     .space-bg {
       position: fixed;
       top: 0;
@@ -32,7 +33,7 @@
       overflow: hidden;
     }
 
-    /* Floating Particles */
+    /* FLOATING PARTICLES – ORIGINAL STYLE */
     .particle {
       position: absolute;
       background: rgba(255, 255, 255, 0.8);
@@ -57,7 +58,7 @@
       }
     }
 
-    /* Nebula Effect */
+    /* NEBULA PULSE – SAMA */
     .nebula {
       position: absolute;
       border-radius: 50%;
@@ -67,18 +68,12 @@
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
     
-    /* GLASS CARD - SAMA MACAM SKRIP ASAL */
+    /* GLASS CARD – IDENTIK DENGAN ASAL */
     .glass-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -102,7 +97,7 @@
       text-align: center;
     }
     
-    /* PHONE NUMBER - STYLE GLASS MACAM ASAL */
+    /* PHONE NUMBER – GLASS BORDER PINK, SAMA */
     .phone-number {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -132,7 +127,7 @@
       width: 28px;
     }
     
-    /* GLOW BUTTON - SAMA MACAM SKRIP ASAL */
+    /* GLOW BUTTON – dikekalkan dalam skrip, tapi TAK DIGUNAKAN (back button dibuang) */
     .glow-btn {
       box-shadow: 0 0 20px rgba(255, 0, 128, 0.6), 0 0 30px rgba(255, 0, 128, 0.2);
       transition: all 0.3s ease;
@@ -162,30 +157,33 @@
       animation: float-logo 3s ease-in-out infinite;
     }
     
-    /* HR LINE - MACAM ASAL */
+    /* HR – SAMA MACAM ASAL */
     hr {
       border-color: rgba(255, 255, 255, 0.1);
       margin-top: 2.5rem;
       margin-bottom: 1.5rem;
     }
+
+    /* tiada back button – clean premium reseller list */
   </style>
 </head>
 <body>
-  <!-- Animated Space Background - SAMA MACAM SKRIP ASAL -->
+  <!-- Animated Space Background – SAMA MACAM ASAL, TAK SENTUH -->
   <div class="space-bg" id="spaceBackground"></div>
 
-  <!-- GLASS CARD UTAMA - SAMA MACAM SKRIP ASAL -->
+  <!-- GLASS CARD UTAMA – SAMA TAPI BUTANG BACK DAH DIBUANG -->
   <div class="glass-card reseller-container">
-    <!-- Logo -->
+    
+    <!-- Logo Jstore – floating effect -->
     <div class="flex justify-center mb-4">
       <img src="https://iili.io/H7B4QYF.png" alt="Jstore Logo" class="w-20 floating-logo" />
     </div>
     
-    <!-- Title -->
+    <!-- Title – bold pink, tracking sama -->
     <h1 class="text-3xl font-extrabold text-pink-500 mb-1 drop-shadow-lg tracking-wide">JSTORE RESELLER</h1>
     <p class="text-gray-300 mb-6 text-sm uppercase tracking-wider">Registered Seller List</p>
     
-    <!-- Reseller Numbers - GLASS STYLE MACAM ASAL -->
+    <!-- LIST NOMBOR RESELLER – SAMA PERSIS DENGAN ASAL, 8 NUMBER -->
     <div class="space-y-3 text-left">
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
@@ -206,36 +204,32 @@
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
         <span class="text-white tracking-wide">0189668011</span>
-        </div>
+      </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
         <span class="text-white tracking-wide">0143035717</span>
-        </div>
+      </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
         <span class="text-white tracking-wide">0103936293</span>
-        </div>
+      </div>
       <div class="phone-number">
         <i class="fas fa-phone-alt"></i>
         <span class="text-white tracking-wide">01110662672</span>
       </div>
     </div>
     
-    <!-- Back button - PERGI LINK JSTORE7.GITHUB.IO/PCN -->
-    <a href="https://jstore7.github.io/pcn/" target="_blank" class="glow-btn mt-8 mb-6 inline-flex items-center">
-      <i class="fas fa-arrow-left mr-2"></i> Back
-    </a>
+  
     
-    <hr>
     <p class="text-gray-400 text-xs mt-4">© 2025 Jstore IPTV · Premium Streaming Service</p>
   </div>
   
   <script>
-    // BACKGROUND SPACE - SAMA MACAM SKRIP ASAL
+    // BACKGROUND SPACE – 100% SAMA MACAM ORIGINAL, 80 partikel, 4 nebula
     document.addEventListener('DOMContentLoaded', function() {
       const spaceBg = document.getElementById('spaceBackground');
       
-      // Create particles - 80 bijik
+      // Create particles – 80 bijik, exactly sama
       for (let i = 0; i < 80; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
@@ -256,7 +250,7 @@
         spaceBg.appendChild(particle);
       }
       
-      // Create nebula - 4 bijik
+      // Create nebula – 4 bijik dengan warna premium
       for (let i = 0; i < 4; i++) {
         const nebula = document.createElement('div');
         nebula.classList.add('nebula');
@@ -280,7 +274,7 @@
         spaceBg.appendChild(nebula);
       }
       
-      // Interactive effect untuk glass card - macam asal
+      // Interactive effect untuk glass card – macam asal
       const card = document.querySelector('.glass-card');
       if(card) {
         card.addEventListener('mouseenter', () => {
@@ -291,7 +285,7 @@
         });
       }
       
-      // Interactive effect untuk phone numbers
+      // Interactive effect untuk phone numbers – setiap satu responsive
       const numbers = document.querySelectorAll('.phone-number');
       numbers.forEach(num => {
         num.addEventListener('mouseenter', () => {

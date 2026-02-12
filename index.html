@@ -209,10 +209,10 @@
       </div>
     </div>
     
-    <!-- Back button - GLOW BTN MACAM ASAL -->
-    <button onclick="window.close()" class="glow-btn mt-8 mb-6">
+    <!-- Back button - PERGI LINK JSTORE7.GITHUB.IO/PCN -->
+    <a href="https://jstore7.github.io/pcn/" target="_blank" class="glow-btn mt-8 mb-6 inline-flex items-center">
       <i class="fas fa-arrow-left mr-2"></i> Back
-    </button>
+    </a>
     
     <hr>
     <p class="text-gray-400 text-xs mt-4">© 2025 Jstore IPTV · Premium Streaming Service</p>
@@ -290,16 +290,6 @@
         });
       });
     });
-
-    // Backup if window.close fails
-    const backBtn = document.querySelector('.glow-btn');
-    if(backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        if (!window.close()) {
-          window.location.href = 'about:blank';
-        }
-      });
-    }
   </script>
 </body>
 </html>
